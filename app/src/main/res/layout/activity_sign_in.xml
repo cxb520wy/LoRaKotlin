@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.xiaodao.lora.ui.activity.SignInActivity"/>
+
+        <variable
+            name="activity"
+            type="SignInActivity"/>
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_title"
+            layout="@layout/custom_title_bar"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/H30"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:paddingLeft="@dimen/W11"
+            android:text="您当前的位置："
+            android:textColor="@color/gray_999"
+            android:textSize="@dimen/H11"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/H188">
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/H188"
+                android:clickable="true"/>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/base_button_click_selector"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/huidaodangqian"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/H30"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:paddingLeft="@dimen/W11"
+            android:text="报警器绑定的地址："
+            android:textColor="@color/gray_999"
+            android:textSize="@dimen/H11"/>
+
+        <LinearLayout
+            android:id="@+id/rl_dstination"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/H36"
+            android:layout_marginLeft="@dimen/W11"
+            android:layout_marginRight="@dimen/W11"
+            android:background="@drawable/map_background_selector"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/W7"
+                android:layout_marginRight="@dimen/W10"
+                android:src="@mipmap/qiandaoweizhi"/>
+
+            <TextView
+                android:id="@+id/tv_dstination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/W7"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:hint="请在地图上查看签到位置"
+                android:text=""
+                android:textColor="@color/dark"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_sign_in"
+            android:layout_width="@dimen/W160"
+            android:layout_height="@dimen/H36"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/H52"
+            android:background="@drawable/trouble_hand_confirm_bg_selector">
+
+            <TextView
+                android:id="@+id/tv_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="确认签到"
+                android:textColor="@color/base_text_selector"
+                android:textSize="@dimen/H14"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

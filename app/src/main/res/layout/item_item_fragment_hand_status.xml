@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="@dimen/W62"
+            android:layout_height="@dimen/H56"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/tu5"
+            />
+
+    </RelativeLayout>
+
+</layout>

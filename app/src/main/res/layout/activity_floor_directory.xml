@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_background"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_title"
+            layout="@layout/custom_title_bar"/>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_house_shape"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/H180"
+                        android:background="@color/floor_directory_bg">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="@dimen/W3"
+                            android:layout_marginRight="@dimen/W3"
+                            android:overScrollMode="never">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_alignParentBottom="true"
+                            android:src="@color/default_background"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/H52"
+                        android:background="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/W13"
+                                android:layout_marginRight="@dimen/W13"
+                                android:src="@mipmap/weizhi_handing"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_location"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/W24"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:lineSpacingExtra="@dimen/H4"
+                            android:maxLines="2"
+                            android:text="公司结构I机构I金佛I囧结果哦机构I我而评价够I为佛ie奇偶"
+                            android:textColor="#333333"
+                            android:textSize="@dimen/H14"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/fire_alarm_detail_bg">
+
+                        <LinearLayout
+                            android:id="@+id/ll_alarm_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/H9"
+                            android:layout_marginLeft="@dimen/W7"
+                            android:layout_marginRight="@dimen/W7"
+                            android:layout_marginTop="@dimen/H9"
+                            android:background="@mipmap/floor_directory_huojingdi"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/H9"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_shebeishu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/W7"
+                                    android:src="@mipmap/shebeishu_floor_alarm"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_shebeishu_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/W7"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="设备数："
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"
+                                    />
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_shebeishu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="2个"
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_zhengchangshu_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="正常："
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_zhengchangshu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="1个"
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_huozaibaojingshu_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="火灾报警："
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_huozaibaojingshu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="1个"
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_guzhangbaojingshu_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="故障报警："
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_guzhangbaojingshu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="0个"
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H10"
+                                android:src="@color/press"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/H9"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_shebei_status"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/W7"
+                                    android:src="@mipmap/shebei_floor_alarm"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_shebeizhuangtai_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/W7"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="设备状态："
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"
+                                    />
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_shebeizhuangtai"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="火灾报警"
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_shoucibaojing_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="首次报警时间："
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_shoucibaojing"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="2017.03.03 12:25"
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_zuihoubaojing_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="最后报警时间："
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_zuihoubaojing"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="2017.03.03 12:25"
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_baojingleixing_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="报警类型："
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_baojingleixing"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="火灾报警"
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_chulizhuangtai_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="处理状态："
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_chulizhuangtai"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="处理中"
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H9"
+                                android:src="@color/press"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/H10"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_shebeizu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/W7"
+                                    android:src="@mipmap/shebeizu_floor_alarm"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_shebeizu_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/W7"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="所属设备组："
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"
+                                    />
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_shebeizu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="天汇城"
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_building_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="所在楼栋："
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_building"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="天汇城二期6号"
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/H10"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_floor_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="所在楼层："
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_floor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="18层（共39层）"
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

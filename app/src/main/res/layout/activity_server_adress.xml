@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="loginactivity"
+            type="com.xiaodao.lora.ui.activity.LoginActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/di_server_adress"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/H45"
+            android:layout_height="@dimen/W54"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/H62"
+            android:src="@mipmap/logo"/>
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/H14"
+            android:ellipsize="middle"
+            android:maxLines="1"
+            android:text="@string/login_app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/H14"/>
+
+        <TextView
+            android:id="@+id/tv_app_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/H9"
+            android:ellipsize="middle"
+            android:maxLines="1"
+            android:text="@string/login_app_desc"
+            android:textColor="@color/white"
+            android:textSize="@dimen/H14"/>
+
+        <TextView
+            android:id="@+id/tv_mqtt_adress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/H60"
+            android:ellipsize="middle"
+            android:maxLines="1"
+            android:text="MQTT服务器地址"
+            android:textColor="@color/white"
+            android:textSize="@dimen/H12"/>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/W238"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/H18">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/W4"
+                    android:src="@mipmap/mqtt"/>
+
+                <EditText
+                    android:id="@+id/edt_mqtt_adress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:layout_marginLeft="@dimen/W7"
+                    android:layout_marginRight="@dimen/W7"
+                    android:gravity="center"
+                    android:digits="1234567890.:"
+                    android:hint="请输入MQTT服务器地址"
+                    android:inputType="numberSigned"
+                    android:maxLines="1"
+                    android:scrollbars="horizontal"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_transparent60"
+                    android:textSize="@dimen/H10"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_marginTop="@dimen/H5"
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:layout_alignParentBottom="true"
+                android:src="@color/white"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_apply_adress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/H26"
+            android:ellipsize="middle"
+            android:maxLines="1"
+            android:text="应用服务器地址"
+            android:textColor="@color/white"
+            android:textSize="@dimen/H12"/>
+
+
+        <LinearLayout
+            android:layout_width="@dimen/W238"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/H18">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/W4"
+                    android:src="@mipmap/yingyongfuwuqi"/>
+
+                <EditText
+                    android:id="@+id/edt_apply_adress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:layout_marginLeft="@dimen/W7"
+                    android:layout_marginRight="@dimen/W7"
+                    android:ellipsize="middle"
+                    android:gravity="center"
+                    android:digits="1234567890.:"
+                    android:hint="请输入应用服务器地址"
+                    android:inputType="numberSigned"
+                    android:maxLines="1"
+                    android:scrollbars="horizontal"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_transparent60"
+                    android:textSize="@dimen/H10"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_marginTop="@dimen/H5"
+                android:layout_width="match_parent"
+                android:layout_height="3px"
+                android:layout_alignParentBottom="true"
+                android:src="@color/white"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/H62"
+            android:id="@+id/rl_login_button"
+            android:layout_width="@dimen/W238"
+            android:layout_height="@dimen/H38"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/login_button_background_selector">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="@dimen/H11"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

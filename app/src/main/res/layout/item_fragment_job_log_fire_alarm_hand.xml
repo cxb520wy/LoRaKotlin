@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_expand"
+            android:layout_width="match_parent"
+            android:background="@drawable/base_button_click_selector"
+            android:layout_height="@dimen/H35">
+
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/H13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/iv_green"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="@dimen/W19"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/W7"
+                        android:src="@drawable/job_log_sign_in_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:text="报警处理："
+                    android:textColor="@color/dark"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/H11"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/tv_reason"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="电路问题引起的火灾"
+                    android:textColor="@color/dark"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/H11"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/tv_expand"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/W11"
+                    android:text="展开"
+                    android:textColor="@color/gray_text_selector"
+                    android:lines="1"
+                    android:layout_marginRight="@dimen/W18"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/H9"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_time"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_marginLeft="@dimen/W19"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:text="2017.03.05"
+                    android:textColor="@color/gray_999"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/H8"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/W10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="12:53"
+                    android:id="@+id/tv_time"
+                    android:textColor="@color/gray_999"
+                    android:lines="1"
+                    android:textSize="@dimen/H8"
+                    android:ellipsize="end"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_divide"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/W11"
+                android:layout_marginRight="@dimen/W11"
+                android:src="@color/press"/>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_detail"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginLeft="@dimen/W18"
+            android:layout_marginRight="@dimen/W18"
+            android:id="@+id/recycler_view_pictrue"
+            android:scrollbars="none"
+            android:layout_marginTop="@dimen/H8"
+            android:overScrollMode="never"
+            android:layout_marginBottom="@dimen/H8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/H12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_location"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/W18"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/dingwei_joblog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/W6"
+                android:text="签到到成功签到成功签到成功签到成功签到成功签到成功"
+                android:textColor="@color/gray_999"
+                android:lines="1"
+                android:layout_marginRight="@dimen/W11"
+                android:ellipsize="end"
+                android:textSize="@dimen/H8"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/H6"
+            android:src="@color/fire_alarm_detail_bg"/>
+
+    </LinearLayout>
+
+</layout>

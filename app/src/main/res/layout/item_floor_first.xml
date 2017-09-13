@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.xiaodao.lora.ui.activity.MainActivity"/>
+        <!--TODO-->
+        <variable
+            name="activity"
+            type="MainActivity"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/H37"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_marginRight="@dimen/W26"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/iv_floor"
+                android:scaleType="fitXY"
+                android:layout_width="@dimen/W255"
+                android:layout_height="match_parent"
+                />
+
+            <RelativeLayout
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/W11"
+                android:layout_marginRight="@dimen/W11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/ll_alarm_container"
+                    android:layout_width="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/W40"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_floor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_gravity="center"
+                android:lines="1"
+                android:text="330楼"
+                android:textColor="@color/floor_directory_text_normal"
+                android:textSize="@dimen/H11"/>
+        </FrameLayout>
+    </RelativeLayout>
+
+</layout>

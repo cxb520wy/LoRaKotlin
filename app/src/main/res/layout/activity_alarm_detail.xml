@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_background"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_title"
+            layout="@layout/custom_title_bar"/>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_house_shape"
+                        android:layout_width="match_parent"
+                        android:paddingLeft="@dimen/W7"
+                        android:paddingRight="@dimen/W7"
+                        android:paddingBottom="@dimen/H6"
+                        android:paddingTop="@dimen/H6"
+                        android:layout_height="@dimen/H172"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/iv_house_shape"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/huxing"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_icon_alarm_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/huojing_floor_click_selector">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_centerInParent="true">
+
+                                <TextView
+                                    android:id="@+id/tv_icon_alarm_number"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text=""
+                                    android:visibility="gone"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/H7"/>
+
+                                <TextView
+                                    android:id="@+id/tv_icon_alarm_type"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="正常"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/H4"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_alignParentBottom="true"
+                            android:src="@color/press"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/H49"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/tv_location"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/W11"
+                            android:layout_marginRight="@dimen/W14"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:lineSpacingExtra="@dimen/H3"
+                            android:lines="2"
+                            android:text="公司结构I机构I金佛I囧结果哦机构I我而评价够I为佛ie奇偶"
+                            android:textColor="@color/dark"
+                            android:textSize="@dimen/H14"/>
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:layout_width="3px"
+                            android:layout_height="@dimen/H38"
+                            android:layout_gravity="center_vertical"
+                            android:src="@color/press"/>
+
+                        <FrameLayout
+                            android:visibility="gone"
+                            android:id="@+id/fl_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/base_button_click_selector">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/W54"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical"
+                                android:paddingLeft="@dimen/W11"
+                                android:paddingRight="@dimen/W11">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@mipmap/ditu"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="@dimen/H6"
+                                    android:text="到这去"
+                                    android:textColor="@color/fire_alarm_detail_map"
+                                    android:textSize="@dimen/H9"/>
+
+                            </LinearLayout>
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/fire_alarm_detail_bg">
+
+                        <LinearLayout
+                            android:id="@+id/ll_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/W7"
+                            android:layout_marginRight="@dimen/W7"
+                            android:layout_marginTop="@dimen/H9"
+                            android:layout_marginBottom="@dimen/H7"
+                            android:background="@mipmap/guzhangditu_detail"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/H9"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_shebei"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/W7"
+                                    android:src="@mipmap/shebei_floor_alarm"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_equipment_number"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/W7"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="设备1"
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H12"
+                                    />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H6"
+                                android:src="@color/press"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H10"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_alarm_status_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="设备状态："
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_alarm_status"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="火灾报警"
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_alarm_firs_time_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="首次报警时间："
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_alarm_firs_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="2017.03.03 12:25"
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_alarm_last_time_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="最后报警时间："
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_alarm_last_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="2017.03.03 12:25"
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_alarm_desc_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="报警描述："
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_alarm_desc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="火灾报警"
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_alarm_deal_status_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="处理状态："
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_alarm_deal_status"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="未接警"
+                                    android:textColor="@color/floor_directory_text999_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H10"
+                                android:src="@color/press"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/H9"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/iv_shebeizu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/W7"
+                                    android:src="@mipmap/shebeizu_floor_alarm"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_equipment_group_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/W7"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="所属设备组："
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"
+                                    />
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_equipment_group"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="天汇城"
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_department_name_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="所在楼栋："
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_department_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="天汇城二期6号"
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/H10"
+                                android:layout_marginLeft="@dimen/W27"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_department_floor_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="所在楼层："
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ctv_department_floor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="18层（共39层）"
+                                    android:textColor="@color/floor_directory_text666_selector"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_botttom_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fire_alarm_detail_bg">
+
+            <RelativeLayout
+                android:id="@+id/rl_receive"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/H41"
+                android:layout_weight="1"
+                android:background="@drawable/alarm_detail_click_selector">
+
+                <TextView
+                    android:id="@+id/tv_receive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="接警"
+                    android:textColor="@color/alarm_detail_text_selector"
+                    android:textSize="@dimen/H14"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:src="@color/white"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_deal"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/H41"
+                android:layout_weight="1"
+                android:background="@drawable/alarm_detail_click_selector">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="立即处理"
+                    android:textColor="@color/alarm_detail_text_selector"
+                    android:textSize="@dimen/H14"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

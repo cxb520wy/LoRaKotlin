@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/H41">
+
+        <ImageView
+            android:id="@+id/iv_current"
+            android:layout_centerInParent="true"
+            android:src="@drawable/date_current_bg_circle"
+            android:visibility="gone"
+            android:layout_width="@dimen/H29"
+            android:layout_height="@dimen/H29"/>
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/gray_666"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textSize="@dimen/H11"/>
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/gray_666"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textSize="@dimen/H7"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/press"/>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_title"
+            layout="@layout/custom_title_bar"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/H120"
+            android:background="@mipmap/tu_sign_in_list">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_sign_in_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="已签到"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/H22"/>
+
+                <TextView
+                    android:id="@+id/tv_sign_in_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/H13"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="已连续签到0天"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/H13"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/H37"
+            android:background="@color/sign_in_time_title_bg">
+
+            <TextView
+                android:id="@+id/tv_time_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="154564654"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/H13"/>
+
+            <FrameLayout
+                android:id="@+id/fl_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/W5"
+                android:background="@drawable/calendar_color_click_selector">
+
+                <ImageView
+                    android:id="@+id/iv_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/W16"
+                    android:layout_marginRight="@dimen/W16"
+                    android:src="@mipmap/zuo_sign_in_list"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_next"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/W5"
+                android:layout_toRightOf="@id/tv_month_title"
+                android:background="@drawable/calendar_color_click_selector">
+
+                <ImageView
+                    android:id="@+id/iv_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/W16"
+                    android:layout_marginRight="@dimen/W16"
+                    android:src="@mipmap/you_sign_in_list"/>
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/week_rv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/H37"
+            android:background="@color/sign_in_time_title_bg"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/date_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/H5"
+            android:overScrollMode="never"
+
+            android:scrollbars="none">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</layout>

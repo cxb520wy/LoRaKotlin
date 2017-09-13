@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/H36"
+                    android:background="@color/basic_color">
+
+        <FrameLayout
+            android:id="@+id/fl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/basic_color_click_selector">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/W11"
+                android:layout_marginRight="@dimen/W11"
+                android:src="@mipmap/fanhui"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="8"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/H14"/>
+
+        <FrameLayout
+            android:id="@+id/fl_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/basic_color_click_selector">
+
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/W11"
+                android:layout_marginRight="@dimen/W11"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/W11"
+                android:layout_marginRight="@dimen/W11"
+                android:maxLines="1"
+                android:text="gff"
+                android:visibility="gone"
+                android:textColor="@color/base_text_selector"
+                android:textSize="@dimen/H11"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</layout>
+

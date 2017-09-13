@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <RelativeLayout
+            android:layout_marginTop="@dimen/H12"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/H12"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_hand_status"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/W18"
+                android:text="已报告现场情况"
+                android:textColor="@color/dark"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textSize="@dimen/H11"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/iv_119"
+                android:layout_marginLeft="@dimen/W5"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_hand_status"
+                android:src="@mipmap/dianhua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/W18"
+                android:text="2017/03/02 12:25"
+                android:textColor="@color/gray_999"
+                android:lines="1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/W18"
+                android:ellipsize="end"
+                android:textSize="@dimen/H8"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_hand_desc"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/W18"
+            android:text="已拨打火警电话已拨打火警电话已拨打火警电话已拨打火警电话已拨打火警电话已拨打火警电话"
+            android:textColor="@color/gray_999"
+            android:lineSpacingExtra="@dimen/H3"
+            android:layout_marginRight="@dimen/W18"
+            android:textSize="@dimen/H9"
+            android:layout_marginBottom="@dimen/H6"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_read_more"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/W18"
+            android:text="全文"
+            android:layout_marginBottom="@dimen/H6"
+            android:textColor="@color/basic_color_text_selector"
+            android:lineSpacingExtra="@dimen/H3"
+            android:layout_marginRight="@dimen/W18"
+            android:textSize="@dimen/H9"
+            android:layout_height="wrap_content"/>
+        
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginLeft="@dimen/W18"
+            android:layout_marginRight="@dimen/W18"
+            android:id="@+id/recycler_view"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:layout_marginBottom="@dimen/H12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_divide"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/W11"
+            android:layout_marginRight="@dimen/W11"
+            android:src="@color/press"/>
+
+    </LinearLayout>
+
+</layout>

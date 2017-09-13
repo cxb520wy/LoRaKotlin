@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_title"
+            layout="@layout/custom_title_bar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefreshlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/ll_root"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_house_shape"
+                            android:layout_width="match_parent"
+                            android:paddingLeft="@dimen/W7"
+                            android:paddingRight="@dimen/W7"
+                            android:paddingBottom="@dimen/H6"
+                            android:paddingTop="@dimen/H6"
+                            android:layout_height="@dimen/H172"
+                            android:background="@color/white">
+
+                            <ImageView
+                                android:id="@+id/iv_house_shape"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerInParent="true"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/huxing"/>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_icon_alarm_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/huojing_floor_click_selector">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_centerInParent="true">
+
+                                    <TextView
+                                        android:id="@+id/tv_icon_alarm_number"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:ellipsize="end"
+                                        android:lines="1"
+                                        android:text=""
+                                        android:visibility="gone"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/H7"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_icon_alarm_type"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:ellipsize="end"
+                                        android:lines="1"
+                                        android:text="正常"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/H4"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_alignParentBottom="true"
+                                android:src="@color/press"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/H67">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/W34"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/W14"
+                                    android:src="@mipmap/weizhi_handing"/>
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/tv_location"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="@dimen/W34"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:lineSpacingExtra="@dimen/H4"
+                                android:lines="2"
+                                android:text="公司结构I机构I金佛I囧结果哦机构I我而评价够I为佛ie奇偶"
+                                android:textColor="#333333"
+                                android:textSize="@dimen/H14"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginLeft="@dimen/W11"
+                            android:layout_marginRight="@dimen/W11"
+                            android:src="#e2e2e2"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H10"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/W34"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/W14"
+                                        android:src="@mipmap/shebeizhuangtai"/>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="设备状态："
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"/>
+
+                                <TextView
+                                    android:id="@+id/tv_equipment_status"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="火灾报警"
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W34"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="首次报警时间："
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"/>
+
+                                <TextView
+                                    android:id="@+id/tv_first_alarm_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="2017.03.03 12:25"
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W34"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="最后报警时间："
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"/>
+
+                                <TextView
+                                    android:id="@+id/tv_last_alarm_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="2017.03.03 12:25"
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W34"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="报警类型："
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"/>
+
+                                <TextView
+                                    android:id="@+id/tv_alarm_type"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="火灾报警"
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W34"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="报警状态："
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"/>
+
+                                <TextView
+                                    android:id="@+id/tv_hand_status"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="处理中"
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:layout_marginLeft="@dimen/W11"
+                                android:layout_marginRight="@dimen/W11"
+                                android:layout_marginTop="@dimen/H10"
+                                android:src="#e2e2e2"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/H10"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/W34"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/W14"
+                                        android:src="@mipmap/shebeizu_handing"/>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="所属设备组："
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tv_equipment_group"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="天汇城"
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/W34"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="所在楼栋："
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"/>
+
+                                <TextView
+                                    android:id="@+id/tv_building"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="天汇城二期6号"
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/H10"
+                                android:layout_marginLeft="@dimen/W34"
+                                android:layout_marginRight="@dimen/W7"
+                                android:layout_marginTop="@dimen/H8"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="所在楼层："
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"/>
+
+                                <TextView
+                                    android:id="@+id/tv_floor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:text="18层（共39层）"
+                                    android:textColor="#333333"
+                                    android:textSize="@dimen/H10"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <com.flyco.tablayout.SlidingTabLayout
+                            android:id="@+id/slidingtablayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/H36"
+                            android:background="@color/default_background"
+                            app:tl_indicator_color="@color/basic_color"
+                            app:tl_indicator_height="2dp"
+                            app:tl_tab_space_equal="true"
+                            app:tl_textSelectColor="@color/basic_color"
+                            app:tl_textUnselectColor="@color/gray_666"
+                            app:tl_textsize="@dimen/H11"/>
+
+                        <com.xiaodao.lora.wigdet.CustomViewPager
+                            android:id="@+id/view_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:overScrollMode="never"
+                            android:scrollbars="none"/>
+
+                    </LinearLayout>
+
+                </android.support.v4.widget.NestedScrollView>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/slidingtablayout_head"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/H36"
+                android:background="@color/default_background"
+                android:visibility="invisible"
+                app:tl_indicator_color="@color/basic_color"
+                app:tl_indicator_height="2dp"
+                app:tl_tab_space_equal="true"
+                app:tl_textSelectColor="@color/basic_color"
+                app:tl_textUnselectColor="@color/gray_666"
+                app:tl_textsize="@dimen/H11"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_deal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/H56"
+                android:layout_alignParentBottom="true"
+                android:background="@color/default_background"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/tv_deal"
+                    android:layout_width="@dimen/W125"
+                    android:layout_height="@dimen/H30"
+                    android:layout_centerInParent="true"
+                    android:background="@color/basic_color"
+                    android:gravity="center"
+                    android:text="处理完成"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/H12"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

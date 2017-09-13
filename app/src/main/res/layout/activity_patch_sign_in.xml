@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_title"
+            layout="@layout/custom_title_bar"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/H37"
+                    android:background="@color/sign_in_time_title_bg">
+
+                    <TextView
+                        android:id="@+id/tv_time_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="154564654"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/H13"/>
+
+                    <FrameLayout
+                        android:id="@+id/fl_preview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/W5"
+                        android:background="@drawable/calendar_color_click_selector">
+
+                        <ImageView
+                            android:id="@+id/iv_preview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/W16"
+                            android:layout_marginRight="@dimen/W16"
+                            android:src="@mipmap/zuo_sign_in_list"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/W5"
+                        android:layout_toRightOf="@id/tv_month_title"
+                        android:background="@drawable/calendar_color_click_selector">
+
+                        <ImageView
+                            android:id="@+id/iv_next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/W16"
+                            android:layout_marginRight="@dimen/W16"
+                            android:src="@mipmap/you_sign_in_list"/>
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/week_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/H37"
+                    android:background="@color/sign_in_time_title_bg"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/date_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/H5"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <EditText
+                    android:id="@+id/edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/H130"
+                    android:layout_marginLeft="@dimen/W11"
+                    android:layout_marginRight="@dimen/W11"
+                    android:layout_marginTop="@dimen/H5"
+                    android:background="@drawable/patch_sign_in_edite_bg"
+                    android:gravity="top"
+                    android:hint="请输入补签到说明"
+                    android:lineSpacingExtra="@dimen/H2"
+                    android:paddingBottom="@dimen/H8"
+                    android:paddingLeft="@dimen/W9"
+                    android:paddingRight="@dimen/W9"
+                    android:paddingTop="@dimen/H8"
+                    android:textColor="@color/gray_999"
+                    android:textColorHint="@color/gray"
+                    android:textSize="@dimen/H11"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_confirm"
+                    android:layout_width="@dimen/W160"
+                    android:layout_height="@dimen/H36"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/H9"
+                    android:layout_marginLeft="@dimen/W11"
+                    android:layout_marginTop="@dimen/H19"
+                    android:background="@drawable/trouble_hand_confirm_bg_selector">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/H6"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="确认"
+                        android:textColor="@color/base_text_selector"
+                        android:textSize="@dimen/H14"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</layout>

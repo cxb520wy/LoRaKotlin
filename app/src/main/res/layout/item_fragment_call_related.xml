@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/H6"
+        android:background="@mipmap/di_call_related"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_marginLeft="@dimen/W7"
+        android:layout_marginRight="@dimen/W7"
+        android:layout_height="@dimen/H47">
+
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/W6"
+            android:layout_width="@dimen/H25"
+            android:background="@drawable/call_related_person_head_bg"
+            android:layout_height="@dimen/H25">
+
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/H24"
+                android:layout_height="@dimen/H24"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_job_desc"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/W11"
+            android:layout_width="wrap_content"
+            android:text="安全管理员："
+            android:textSize="@dimen/H9"
+            android:textColor="@color/white"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:text="六一六一"
+            android:textSize="@dimen/H9"
+            android:textColor="@color/white"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/W11"
+            android:layout_marginRight="@dimen/W11"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="12345678999"
+            android:textSize="@dimen/H9"
+            android:textColor="@color/white"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:focusable="false"
+            android:clickable="true"
+            android:id="@+id/rl_call"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/W11"
+            android:background="@drawable/call_related_call_bg_selector"
+            android:layout_width="@dimen/W48"
+            android:layout_height="@dimen/H16">
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/bohao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/W5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="呼叫"
+                    android:textSize="@dimen/H9"
+                    android:textColor="@color/white"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity"/>
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/xianshidi">
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/H15"
+            android:layout_marginRight="@dimen/H15"
+            android:layout_marginTop="@dimen/H6"
+            android:layout_marginBottom="@dimen/H6"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/dingwei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/W11"
+                android:id="@+id/tv_location"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/H11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="                      "/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>
+

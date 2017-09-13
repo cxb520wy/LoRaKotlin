@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_background">
+
+        <include
+            android:id="@+id/layout_title"
+            layout="@layout/custom_title_bar"/>
+
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_width="@dimen/W67"
+                android:src="@mipmap/logo_about"
+                android:layout_marginTop="@dimen/H50"
+                android:layout_height="@dimen/H56"/>
+
+            <TextView
+                android:id="@+id/tv_app_name"
+                android:layout_marginTop="@dimen/H13"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="lora报警APP"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/H14" />
+
+            <TextView
+                android:id="@+id/tv_app_desc"
+                android:layout_marginTop="@dimen/H9"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="您的掌上消防报警助手"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/H14" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_marginTop="@dimen/H9"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_app_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="V1.0.1"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/H12" />
+
+            <TextView
+                android:id="@+id/tv_company_name"
+                android:layout_marginBottom="@dimen/H22"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="深圳市泰和安科技有限公司"
+                android:textColor="@color/gray_666"
+                android:textSize="@dimen/H8" />
+
+            <ImageView
+                android:layout_above="@id/tv_company_name"
+                android:id="@+id/iv_company_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/timg"
+                android:layout_marginBottom="@dimen/H4"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

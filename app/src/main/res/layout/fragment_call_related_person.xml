@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <com.xiaodao.lora.wigdet.CustomRecyclerView
+        android:id="@+id/recycler_view"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/W7"
+        android:paddingTop="@dimen/H22"
+        android:layout_marginRight="@dimen/W7"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+</layout>

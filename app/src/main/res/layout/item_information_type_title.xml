@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/base_button_click_selector">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:src="@color/information_detail_divide"/>
+
+        <TextView
+            android:background="@color/information_detail_divide_bg"
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/H19"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxEms="8"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/W14"
+            android:text="4月6日"
+            android:textColor="@color/gray_666"
+            android:textSize="@dimen/H11"/>
+
+    </LinearLayout>
+
+</layout>

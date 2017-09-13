@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.xiaodao.lora.wigdet.CustomRecyclerView
+            android:id="@+id/recycler_view"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/H56"
+            android:background="@color/white">
+            
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/tv_deal"
+                android:layout_centerInParent="true"
+                android:text="处理完成"
+                android:textSize="@dimen/H12"
+                android:background="@drawable/basic_color_click_selector"
+                android:textColor="@color/base_text_selector"
+                android:gravity="center"
+                android:layout_width="@dimen/W125"
+                android:layout_height="@dimen/H30"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

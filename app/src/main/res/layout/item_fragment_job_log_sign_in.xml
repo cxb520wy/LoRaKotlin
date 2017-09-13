@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="@dimen/H53">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/H13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/iv_green"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/W18"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginLeft="@dimen/W7"
+                        android:src="@drawable/job_log_sign_in_circle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_toRightOf="@id/iv_green"
+                    android:id="@+id/tv_sign_status"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="签到成功。"
+                    android:textColor="@color/dark"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/H11"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/W11"
+                    android:text="5月22日"
+                    android:textColor="@color/gray_666"
+                    android:lines="1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/W18"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/H9"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/H7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/W18"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/dingwei_joblog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/W6"
+                    android:text="签到到成功签到成功签到成功签到成功签到成功签到成功"
+                    android:textColor="@color/gray_999"
+                    android:lines="1"
+                    android:layout_marginRight="@dimen/W11"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/H8"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:src="@color/press"/>
+    </RelativeLayout>
+
+</layout>

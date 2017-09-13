@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_title"
+            layout="@layout/custom_title_bar"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:src="@color/information_detail_divide"/>
+
+        <TextView
+            android:id="@+id/tv_year_month"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/H19"
+            android:background="@color/information_detail_divide_bg"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxEms="8"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/W14"
+            android:text="4月6日"
+            android:textColor="@color/gray_666"
+            android:textSize="@dimen/H11"/>
+
+        <LinearLayout
+            android:id="@+id/ll_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/H9"
+            android:layout_marginTop="@dimen/H13"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/W11"
+                android:layout_weight="1"
+                android:text="最近天气干燥，注意防火"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/H12"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/W11"
+                android:layout_marginRight="@dimen/W14"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="4月6日"
+                android:textColor="@color/gray_666"
+                android:textSize="@dimen/H9"/>
+
+        </LinearLayout>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never">
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/W14"
+                    android:layout_marginRight="@dimen/W14"
+                    android:lineSpacingExtra="@dimen/H6"
+                    android:paddingBottom="@dimen/H9"
+                    android:text="\u3000\u3000荔枝（学名：Litchi chinensis Sonn.）无患子科，荔枝属常绿乔木，高约10米。果皮有鳞斑状突起，鲜红，紫红。成熟时至鲜红色；种子全部被肉质假种皮包裹。花期春季，果期夏季。果肉产鲜时半透明凝脂状，味香美，但不耐储藏。
+分布于中国的西南部、南部和东南部，广东和福建南部栽培最盛。亚洲东南部也有栽培，非洲、美洲和大洋洲有引种的记录。 荔枝与香蕉、菠萝、龙眼一同号称“南国四大果品”。
+\u3000\u3000荔枝味甘、酸、性温，入心、脾、肝经；可止呃逆，止腹泻，是顽固性呃逆及五更泻者的食疗佳品，同时有补脑健身，开胃益脾，有促进食欲之功效。因性热，多食易上火。荔枝木材坚实，纹理雅致，耐腐，历来为上等名材。常绿乔木，高通常不超过10米，有时可达15米或更高，树皮灰黑色；小枝圆柱状，褐红色，密生白色皮孔。
+\u3000\u3000叶连柄长10-25厘米或过之；小叶2或3对，较少4对，薄革质或革质，披针形或卵状披针形，有时长椭圆状披针形，长6-15厘米，宽2-4厘米，顶端骤尖或尾状短渐尖，全缘，腹面深绿色，有光泽，背面粉绿色，两面无毛；侧脉常纤细，在腹面不很明显，在背面明显或稍凸起；小叶柄长7-8毫米。
+花序顶生，阔大，多分枝；花梗纤细，长2-4毫米，有时粗而短；萼被金黄色短绒毛；雄蕊6-7，有时8，花丝长约4毫米；子房密覆小瘤体和硬毛。
+果卵圆形至近球形，长2-3.5厘米，成熟时通常暗红色至鲜红色；种子全部被肉质假种皮包裹。花期春季，果期夏季。"
+                    android:textColor="@color/gray_666"
+                    android:textSize="@dimen/H10"/>
+
+            </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</layout>

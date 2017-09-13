@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/H56"
+            android:background="@color/basic_color">
+
+            <FrameLayout
+                android:id="@+id/fl_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/H36"
+                android:background="@drawable/basic_color_click_selector">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/W11"
+                    android:layout_marginRight="@dimen/W11"
+                    android:layout_marginTop="@dimen/H12"
+                    android:src="@mipmap/fanhui"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/H11"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxEms="8"
+                android:maxLines="1"
+                android:text="我的工作记录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/H14"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_title">
+
+                <TextView
+                    android:id="@+id/tv_year_month"
+                    android:layout_width="@dimen/W75"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxEms="8"
+                    android:maxLines="1"
+                    android:text="2017年12月"
+                    android:textColor="@color/default_background"
+                    android:textSize="@dimen/H11"/>
+
+
+                <FrameLayout
+                    android:id="@+id/fl_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/H36"
+                    android:layout_toLeftOf="@id/tv_year_month"
+                    android:background="@drawable/basic_color_click_selector">
+
+                    <ImageView
+                        android:id="@+id/iv_preview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/W14"
+                        android:layout_marginRight="@dimen/W14"
+                        android:src="@mipmap/zuo"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/H36"
+                    android:layout_toRightOf="@id/tv_year_month"
+                    android:background="@drawable/basic_color_click_selector">
+
+                    <ImageView
+                        android:id="@+id/iv_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/W14"
+                        android:layout_marginRight="@dimen/W14"
+                        android:src="@mipmap/you"/>
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/slidingtablayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/H29"
+            android:background="@color/default_background"
+            app:tl_indicator_color="@color/basic_color"
+            app:tl_indicator_height="2dp"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/basic_color"
+            app:tl_textUnselectColor="@color/gray_666"
+            app:tl_textsize="@dimen/H11"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+    </LinearLayout>
+
+</layout>

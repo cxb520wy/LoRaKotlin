@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="mainactivity"
+            type="com.xiaodao.lora.ui.activity.MainActivity">
+        </variable>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/base_button_click_selector">
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/H11"
+            android:layout_marginTop="@dimen/H11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tv_information"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:lineSpacingExtra="@dimen/H4"
+                android:layout_marginLeft="@dimen/W11"
+                android:layout_height="wrap_content"
+                android:text="龙舟节请大家加强防火意识!!!"
+                android:textColor="@color/gray_666"
+                android:textSize="@dimen/H9"/>
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/W11"
+                android:layout_marginRight="@dimen/W18"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="2016.05.23 12:25"
+                android:textColor="@color/gray_999"
+                android:textSize="@dimen/H8"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:src="@color/press"/>
+    </LinearLayout>
+
+</layout>

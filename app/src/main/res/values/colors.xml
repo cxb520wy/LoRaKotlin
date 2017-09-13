@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <!--<color name="colorPrimaryDark">#000000</color>-->
+    <color name="colorAccent">#17afa2</color>
+
+    <color name="white">#ffffff</color>
+    <color name="basic_color">#17afa2</color>
+    <color name="basic_color_press">#3a9890</color>
+
+    <color name="end_color">#5ce5c9</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0000ff</color>
+    <color name="red">#ff0000</color>
+    <color name="green">#00ff00</color>
+    <color name="title_gray">#fafafa</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent50">#7f000000</color>
+    <color name="transparent60">#99000000</color>
+    <color name="transparent30">#55000000</color>
+    <color name="transparent80">#cc000000</color>
+    <color name="white_transparent15">#26ffffff</color>
+    <color name="white_transparent30">#55ffffff</color>
+    <color name="white_transparent50">#7fffffff</color>
+    <color name="white_transparent80">#ccffffff</color>
+    <color name="white_transparent60">#99ffffff</color>
+    <color name="fire_alarm">#e66344</color>
+    <color name="trouble_alarm">#f59639</color>
+
+    <color name="sms_login">#f2f2f2</color>
+    <color name="sms_login_press">#55f2f2f2</color>
+
+    <color name="fire_alarm_detail_map">#2dc6ba</color>
+    <color name="fire_alarm_detail_bg">#ededf1</color>
+
+    <color name="default_background">#F5F5F5</color>
+    <color name="default_background_press">#e2e2e2</color>
+    <color name="map_background">#F7F7F7</color>
+    <color name="map_background_press">#55F7F7F7</color>
+
+    <color name="gray_999">#999999</color>
+    <color name="gray_666">#666666</color>
+    <color name="gray_333">#333333</color>
+
+    <color name="dark">#333333</color>
+    <color name="gray">#c2c2c2</color>
+    <color name="press">#e2e2e2</color>
+    <color name="login_divide">#3472bc</color>
+    <color name="login_hint">#e1edff</color>
+    <color name="login_button">#0e56ae</color>
+    <color name="login_button_transparent60">#990e56ae</color>
+
+    <color name="fire_alarm_hand">#ff4d2a</color>
+    <color name="date_current">#292929</color>
+    <color name="modify_name_text_hint">#d9d9d9</color>
+    <color name="modify_sex_woman_text_checked">#fc4377</color>
+    <color name="modify_sex_man_text_checked">#17afa2</color>
+    <color name="sign_in_time_title_bg">#eff9f5</color>
+    <color name="sign_in_time_title_bg_press">#cde9de</color>
+
+    <color name="floor_fire_alarm">#e80e0e</color>
+    <color name="alarm_detail_text_disable">#bdbdbd</color>
+    <color name="vertify_password_text_disable">#c8efeb</color>
+    <color name="vertify_password_next_disable">#7cbfb9</color>
+    <color name="information_detail_divide_bg">#efeff1</color>
+    <color name="information_detail_divide">#cbcbcb</color>
+    <color name="floor_directory_bg">#e8f2fa</color>
+    <color name="floor_directory_text_normal">#1f517f</color>
+    <color name="floor_directory_text_fire">#e80e0e</color>
+
+    <color name="sign_in_date_leave">#f80707</color>
+    <color name="sign_in_date_leaveing">#fcfb5a74</color>
+    <color name="sign_in_date_patch_signing">#1795fb</color>
+    <color name="sign_in_date_no_sign">#faac0e</color>
+    <color name="sign_in_date_rest">#17afa2</color>
+    <color name="sign_in_date_sign">#999999</color>
+    <color name="patch_sign_in_date_defult">#c0c0c0</color>
+
+</resources>
